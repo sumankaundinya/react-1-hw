@@ -6,8 +6,8 @@ const OurValues = () => {
   // Some inspiration ideas found in /data/inspiration_about_us
   return (
     <div>
-      {data.values.map((value, index) => (
-        <div key={index}>
+      {data.values.map((value) => (
+        <div key={value.name}>
           <h3>{value.title}</h3>
           <p>{value.description}</p>
         </div>

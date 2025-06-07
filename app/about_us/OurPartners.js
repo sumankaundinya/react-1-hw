@@ -16,9 +16,9 @@ const OurPartners = () => {
           alignItems: "center",
         }}
       >
-        {data.partners.map((partner, index) => (
+        {data.partners.map((partner) => (
           <img
-            key={index}
+            key={partner.name}
             src={partner.image}
             alt={partner.name}
             style={{ width: "100px", height: "auto" }}

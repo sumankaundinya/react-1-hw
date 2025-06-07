@@ -1,7 +1,4 @@
 .DS_Store
 node_modules
 .next
-components
-public
-readme.md
-package-lock.json
+

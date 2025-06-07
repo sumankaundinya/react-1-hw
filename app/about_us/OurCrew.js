@@ -20,8 +20,8 @@ const OurCrew = () => {
       >
         {data.crew
           .filter((member) => member.image)
-          .map((member, index) => (
-            <div key={index} style={{ textAlign: "center" }}>
+          .map((member) => (
+            <div key={member.name} style={{ textAlign: "center" }}>
               <img
                 src={member.image}
                 alt={member.name}
@@ -37,8 +37,8 @@ const OurCrew = () => {
           ))}
       </div>
 
-      {data.crew.map((member, index) => (
-        <div key={index}>
+      {data.crew.map((member) => (
+        <div key={member.name}>
           <h3>{member.name}</h3>
           <p>{member.bio}</p>
         </div>
