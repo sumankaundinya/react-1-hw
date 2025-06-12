@@ -1,6 +1,11 @@
 .DS_Store
 node_modules
 .next
-nasa_collaboration
-about_us
-data
+
+/data/crewData.json
+/data/mockData.json
+/data/partners.json
+/data/valuesData.json
+/nasa_collaboration/
+/app/about_us/
+/data/inspiration_about_us/
