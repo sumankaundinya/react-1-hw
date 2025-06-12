@@ -20,9 +20,12 @@ export const RootLayout = ({ children }) => {
         {/* TASK - React 1 week 1 */}
         {/* Import and use the Footer component here */}
         {/* Footer found in the ui/Footer.js folder */}
+        <Footer />
+        {/* TASK - React 1 week 2 */}
+        {/* Add the footer to the layout, so it appears on every page */}
       </body>
     </html>
   );
-}
+};
 
 export default RootLayout;

@@ -2,9 +2,9 @@
   inset-inline-start: 0;
   inset-inline-end: 0;
   inset-block-end: 0;
-  background-color: #eee;
+  background-color: #bfbdbd;
   color: #000;
-  padding: var(--spacing-20) var(--spacing-40);
+  padding: var(--spacing-20) var(--spacing-24);
   display: flex;
   justify-content: space-between;
 }
@@ -15,13 +15,15 @@
 
 .footer h3 {
   color: #000;
-  font-size: large;
+  font-size: medium;
   padding: var(--spacing-08) 0;
 }
 
-.footer p, .footer a, .footer li {
+.footer p,
+.footer a,
+.footer li {
   color: #000;
-  font-size: medium;
+  font-size: small;
   font-weight: 200;
   text-align: start;
 }
@@ -44,5 +46,5 @@
 }
 
 .footerList li {
-  padding-block: var(--spacing-04);
+  padding-block: var(--spacing-0);
 }
