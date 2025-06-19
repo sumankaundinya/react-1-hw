@@ -4,14 +4,10 @@ import { useState } from "react";
 import styles from "@/components/destination/destination.module.css";
 import { PlanetWishlistItem } from "@/components/destination/PlanetWishlistItem";
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
-
 import { PlanetCard } from "@/components/destination/PlanetCard";
 
 export const Destinations = () => {
   const [selectedPlanets, setSelectedPlanets] = useState([]);
-  const onAddWishlistItem = (name, thumbnail) => {
-    setSelectedPlanets([...selectedPlanets, { name, thumbnail }]);
-  };
 
   const planetData = [
     {
@@ -32,18 +28,30 @@ export const Destinations = () => {
     },
   ];
 
-  const numberOfPlanets = selectedPlanets.length;
-
-  const onAddOrRemovePlanet = (name) => {
-    setSelectedPlanets(
-      (prev) =>
-        prev.some((p) => p.name === name)
-          ? prev.filter((p) => p.name !== name)
-          : prev // don't add from this function anymore
-    );
+  const onAddWishlistItem = (name, thumbnail) => {
+    setSelectedPlanets((prev) => [...prev, { name, thumbnail }]);
   };
 
-  const isSelected = (name) => selectedPlanets.includes(name);
+  const onAddOrRemovePlanet = (name) => {
+    setSelectedPlanets((prev) => {
+      const alreadyAdded = prev.some((p) => p.name === name);
+
+      if (alreadyAdded) {
+        return prev.filter((p) => p.name !== name);
+      }
+
+      const fromDefaults = planetData.find((p) => p.name === name);
+      if (fromDefaults) {
+        return [...prev, fromDefaults];
+      }
+
+      return prev;
+    });
+  };
+
+  const isSelected = (name) => selectedPlanets.some((p) => p.name === name);
+
+  const numberOfPlanets = selectedPlanets.length;
 
   return (
     <div className="fullBGpicture">
@@ -76,7 +84,7 @@ export const Destinations = () => {
         <section className="card">
           <h2>Possible destinations</h2>
 
-          {planetData.map((planet, index) => (
+          {planetData.map((planet) => (
             <PlanetCard
               key={planet.name}
               name={planet.name}
