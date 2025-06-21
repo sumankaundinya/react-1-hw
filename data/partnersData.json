@@ -1,0 +1,37 @@
+{
+  "intro": "We collaborate with some of the most respected names in the space and technology industries to make every journey extraordinary.",
+  "partners": [
+    {
+      "name": "Alphabet",
+      "image": "/business_partners/alphabet-logo.png"
+    },
+    {
+      "name": "Amazon",
+      "image": "/business_partners/amazon_logo.png"
+    },
+    {
+      "name": "CBC",
+      "image": "/business_partners/CBC_Logo_White.png"
+    },
+    {
+      "name": "Microsoft",
+      "image": "/business_partners/Microsoft-logo-White.png"
+    },
+    {
+      "name": "NYU",
+      "image": "/business_partners/nyu-logo.png"
+    },
+    {
+      "name": "Queens",
+      "image": "/business_partners/QueensLogo_white.png"
+    },
+    {
+      "name": "Samsung",
+      "image": "/business_partners/samsung-logo.png"
+    },
+    {
+      "name": "Sodexo",
+      "image": "/business_partners/sodexo-logo.png"
+    }
+  ]
+}
