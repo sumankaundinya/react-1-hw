@@ -1,0 +1,19 @@
+.roverPhotoCard {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.roverPhotoCard img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.roverPhotoDetails {
+  margin-top: 0.5rem;
+}
